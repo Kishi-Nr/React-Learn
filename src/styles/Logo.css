@@ -1,0 +1,15 @@
+/* Logo.css */
+.logo-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 42px 68px;
+}
+
+.logo-image {
+  max-width: 100px; 
+  max-height: 50px; 
+  object-fit: contain; 
+  transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+

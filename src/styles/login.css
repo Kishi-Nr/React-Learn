@@ -1,0 +1,314 @@
+/* Style untuk container login */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f8ff; /* Biru muda */
+}
+
+.login-container h2 {
+    color: #4CAF50; /* Warna hijau */
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+}
+
+.login-container form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+    display: block;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #4CAF50; /* Hijau saat fokus */
+    outline: none;
+}
+
+.login-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50; /* Warna hijau */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button[type="submit"]:hover {
+    background-color: #45a049; /* Hijau gelap saat hover */
+}
+
+.login-container p {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* styles/login.css */
+
+/* Container utama */
+.sektor-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Box untuk form pencarian */
+  .sektor-box {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+  }
+  
+  /* Judul pencarian */
+  .sektor-title {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Form pencarian dengan grid */
+  .sektor-form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Dua kolom untuk form */
+    gap: 15px;
+    width: 100%;
+  }
+  
+  /* Input form */
+  .sektor-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  /* Tombol submit */
+.sektor-button {
+    grid-column: span 4; /* Membuat tombol melintang dua kolom */
+    background-color: #3b82f6;
+    color: white;
+    padding: 10px 0;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px auto; /* Menambahkan margin otomatis untuk memusatkan tombol */
+    width: 150px; /* Tambahkan lebar tetap untuk tombol agar tampil lebih rapi */
+    display: block; /* Memastikan tombol adalah elemen block untuk margin bekerja */
+  }
+  
+  .sektor-button:hover {
+    background-color: #2563eb; /* Warna biru lebih gelap saat hover */
+  }
+  
+  
+  /* Pesan error */
+  .error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+  
+  /* Pesan tidak ada data */
+  .no-data-message {
+    color: #555;
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+  
+  /* Container untuk hasil pencarian */
+  .hasil-container {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+  }
+  
+  /* Judul hasil pencarian */
+  .hasil-title {
+    font-size: 1.5rem;
+    color: #0284c7; /* Warna biru */
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Tabel hasil pencarian */
+  .hasil-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .hasil-table th, .hasil-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .hasil-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .hasil-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Hover effect pada tabel */
+  .hasil-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsif */
+  @media (max-width: 768px) {
+    .sektor-form {
+      grid-template-columns: 1fr; /* Satu kolom di layar kecil */
+    }
+  
+    .sektor-button {
+      grid-column: span 1; /* Tombol hanya satu kolom */
+    }
+  }
+
+  /* src/styles/Bukudigital.css */
+
+/* Add padding to the top to avoid overlap with fixed navbar */
+.sektoral-container {
+  padding-top: 80px; /* Adjust based on your Navbar's height */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sektoral-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Other styles as needed */
+
+
+.sektoral-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.result-table {
+  margin-top: 20px;
+}
+
+.result-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.result-table th, .result-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.result-table th {
+  background-color: #f1f1f1;
+}
+
+.result-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.detail-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.detail-button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pdf-preview {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.pdf-preview h3 {
+  margin: 0;
+}
+
+.pdf-preview button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pdf-preview button:hover {
+  background-color: #c82333;
+}
+
+.loading-message {
+  text-align: center;
+  font-size: 18px;
+}
+
+.no-data-message {
+  text-align: center;
+  font-size: 18px;
+  color: #6c757d;
+}

@@ -1,0 +1,75 @@
+
+.testimoni {
+  width: 1280px; 
+  padding: 42px 24px;
+  gap: 42px;
+  opacity: 1; 
+  box-sizing: border-box; 
+  margin: 0 auto; 
+}
+
+
+.testimoni-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(
+    2,
+    auto
+  ); 
+  gap: 42px; 
+}
+
+.testimoni-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  padding: 20px;
+  background: #f3f3f3; 
+  box-sizing: border-box; 
+}
+
+.testimoni-text p {
+  font-family: "Epilogue";
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+}
+
+
+.testimoni-footer {
+  display: flex;
+  align-items: center; 
+  gap: 16px; 
+}
+
+.testimoni-start {
+  display: flex;
+  align-items: center;
+  gap: 4px; 
+}
+
+
+.testimoni-detile {
+  display: flex;
+  flex-direction: column;
+  gap: 2px; 
+  align-items: flex-start; 
+}
+
+
+.testimoni-nama-company .nama {
+  font-family: "Epilogue";
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  margin: 0; 
+}
+
+
+.testimoni-nama-company .company {
+  font-family: "Epilogue";
+  font-size: 17px;
+  text-align: left;
+  margin: 0; 
+}

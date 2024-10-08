@@ -1,0 +1,97 @@
+:root {
+  --layout-width: auto;
+  --layout-padding: 42px 68px;
+  --layout-gap: 68px;
+  --layout-opacity: 1;
+}
+
+.layout {
+  display: flex;
+  width: var(--layout-width);
+  padding: var(--layout-padding);
+  gap: var(--layout-gap);
+  justify-content: space-between;
+  background-color: #ffffff;
+  align-items: center; 
+  margin-top: 5rem;
+}
+
+
+.text-section {
+  flex: 2;
+}
+
+
+.image-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.image-section img {
+  width: 500px; 
+  height: 380px; 
+  ;
+}
+
+.brand {
+  font-family: "Epilogue", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.visual{
+  font-family: "Epilogue", sans-serif;
+  font-size: 68px;
+  font-weight: 600;
+  line-height: 69.7px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-family: "Epilogue", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+}
+
+
+.button-link {
+  font-family: "Epilogue", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #2d2d2d;
+  width: 211px; 
+  height: 78px; 
+  padding: 24px 64px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1; 
+  cursor: pointer;
+  color: #ffffff;
+  text-decoration: none;
+}
+  
+
+.button-link:hover {
+  background-color: #007bff;
+}
+
+.testimoni-text p {
+  font-family: "Epilogue";
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+}

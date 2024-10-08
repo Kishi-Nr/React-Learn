@@ -1,0 +1,75 @@
+:root {
+    --navbar-color:#FFFFFF; 
+    --logo-font-family: "Epilogue", sans-serif;
+    --logo-font-size: 20px; 
+    --logo-font-weight: 600; 
+    --logo-line-height: 30px; 
+    --menu-font-family: "Epilogue", sans-serif; 
+    --menu-font-size: 17px; 
+    --menu-font-weight: 400; 
+    --menu-line-height: 27px; 
+  }
+  
+ 
+  .navbar {
+    display: flex;
+    width: Fill (1,280px); 
+    height: 78px; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: var(--navbar-color); 
+    position: fixed !important;
+    top: 0;
+    left: 0; 
+    right: 0; 
+
+  }
+  
+  .navbar-brand a {
+    font-family: var(--logo-font-family);
+    font-size: var(--logo-font-size);
+    font-weight: var(--logo-font-weight);
+    line-height: var(--logo-line-height);
+    text-align: left;
+    color: #181818; 
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 42px 24px;
+  }
+  
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 20px;
+    padding: 0;
+    gap: 40px;
+    
+  }
+  
+  .navbar-menu li {
+    margin-left: 20px; 
+  }
+  
+  .navbar-menu  {
+    text-decoration: none;
+    color: #333; 
+    font-family: var(--menu-font-family);
+    font-size: var(--menu-font-size); 
+    font-weight: var(--menu-font-weight); 
+    line-height: var(--menu-line-height); 
+    text-align: left; 
+  }
+
+  .navbar-menu li:last-child {
+    margin-right: 20px; 
+  }
+  
+  
+  .navbar-logo {
+
+    font-size: 30px;
+    margin-left: 20px;
+    font-family: Epilogue;
+    color: #000000;
+  }
