@@ -1,11 +1,12 @@
 
 .testimoni {
-  width: 1280px; 
+  width:Fill (1,232px); 
+  max-width: 1600px;
   padding: 42px 24px;
   gap: 42px;
   opacity: 1; 
   box-sizing: border-box; 
-  margin: 0 auto; 
+  margin: auto; 
 }
 
 
@@ -13,8 +14,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   grid-template-rows: repeat(
-    2,
-    auto
+    2,Fill (394.67px)
+    
   ); 
   gap: 42px; 
 }
@@ -28,13 +29,15 @@
   box-sizing: border-box; 
 }
 
-.testimoni-text p {
-  font-family: "Epilogue";
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 27px;
-  text-align: left;
+.testimoni-text {
+  font-family: 'Epilogue';
+  font-weight: 400; /* Sesuaikan dengan gaya yang diinginkan */
+  font-size: 16px; /* Ganti ukuran sesuai kebutuhan */
+  line-height: 24px; /* Ganti sesuai dengan jarak yang diinginkan */
+  color: #2D2D2D; /* Ganti dengan warna yang diinginkan */
+  margin-bottom: 16px; /* Jarak antara teks dan footer */
 }
+
 
 
 .testimoni-footer {

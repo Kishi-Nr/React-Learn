@@ -1,5 +1,5 @@
 :root {
-  --layout-width: auto;
+  --layout-width: Fill (1,280px);
   --layout-padding: 42px 68px;
   --layout-gap: 68px;
   --layout-opacity: 1;

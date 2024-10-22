@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Document, Page, pdfjs } from "react-pdf"; // If you intend to use PDF.js for rendering
 import "../../styles/login.css";
-import Navbar from "../organisms/Navbar";
+
 
 
 pdfjs.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
@@ -47,7 +47,6 @@ const Buku = () => {
 
   return (
     <div className="sektoral-container">
-        <Navbar/>
       <div className="sektoral-box">
         <h2 className="sektoral-title">Daftar Buku Digital</h2>
         {error && <p className="error-message">{error}</p>}

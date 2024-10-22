@@ -1,8 +1,7 @@
 import React from 'react';
-import TestiBodyText from './TestiBodyTeks';
+import Label from "../../atoms/Label"; // Import Label component
 import Image from "../../atoms/Image";
-import Star from "../../atoms/Image"
-
+import Star from "../../atoms/Image";
 
 const TestimoniFooter = ({ avatarSrc, avatarAlt, nama, company }) => {
   return (
@@ -16,7 +15,9 @@ const TestimoniFooter = ({ avatarSrc, avatarAlt, nama, company }) => {
           <Star src="/img/testimoni/Star.png" alt="Star" />
           <Star src="/img/testimoni/Star.png" alt="Star" />
         </div>
-        <TestiBodyText nama={nama} company={company} />
+        {/* Replace TestiBodyText with Label */}
+        <Label className="testimoni-nama">{nama}</Label>
+        <Label className="testimoni-company">{company}</Label>
       </div>
     </div>
   );

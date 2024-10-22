@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   padding: 42px 68px;
+  width: Fill (1,280px);;
 }
 
 .logo-image {

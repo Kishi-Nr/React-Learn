@@ -1,6 +1,6 @@
 import React from 'react';
 import TestimoniTitle from '../atoms/Title';
-import TestimoniText from '../atoms/testimoni/TestimoniText';
+import Label from '../atoms/Label'; // Import Label component
 import TestimoniFooter from '../molecules/testimoni/TestimoniFooter'; 
 import  '../../styles/Testimoni.css'; 
 
@@ -11,29 +11,45 @@ const TestimoniOrganism = () => {
         <TestimoniTitle title="Testimonial" />
         <div className="testimoni-content">
           <div className="testimoni-item">
-            <TestimoniText text="This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com" />
+            {/* Replace TestimoniText with Label */}
+            <Label className="testimoni-text">
+              This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com
+            </Label>
             <TestimoniFooter avatarSrc="/img/testimoni/Client Image.png" avatarAlt="Avatar 1" nama="Gemma Nolen" company="Google" />
           </div>
 
           <div className="testimoni-item">
-            <TestimoniText text="This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com" />
+            <Label className="testimoni-text">
+              This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com
+            </Label>
             <TestimoniFooter avatarSrc="/img/testimoni/Client Image.png" avatarAlt="Avatar 1" nama="Gemma Nolen" company="Google" />
           </div>
 
           <div className="testimoni-item">
-            <TestimoniText text="This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com" />
+            <Label className="testimoni-text">
+              This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com
+            </Label>
             <TestimoniFooter avatarSrc="/img/testimoni/Client Image.png" avatarAlt="Avatar 1" nama="Gemma Nolen" company="Google" />
           </div>
+
           <div className="testimoni-item">
-            <TestimoniText text="This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com" />
+            <Label className="testimoni-text">
+              This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com
+            </Label>
             <TestimoniFooter avatarSrc="/img/testimoni/Client Image.png" avatarAlt="Avatar 1" nama="Gemma Nolen" company="Google" />
           </div>
+
           <div className="testimoni-item">
-            <TestimoniText text="This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com" />
+            <Label className="testimoni-text">
+              This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com
+            </Label>
             <TestimoniFooter avatarSrc="/img/testimoni/Client Image.png" avatarAlt="Avatar 1" nama="Gemma Nolen" company="Google" />
           </div>
+
           <div className="testimoni-item">
-            <TestimoniText text="This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com" />
+            <Label className="testimoni-text">
+              This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com
+            </Label>
             <TestimoniFooter avatarSrc="/img/testimoni/Client Image.png" avatarAlt="Avatar 1" nama="Gemma Nolen" company="Google" />
           </div>
         </div>

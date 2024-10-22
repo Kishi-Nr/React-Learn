@@ -1,6 +1,6 @@
 // src/Components/organisms/kontak/Kontak.js
 import React from 'react';
-import Lable from '../atoms/Lable';
+import Lable from '../atoms/Label';
 import SosMed from '../molecules/contact/SosMed';
 import ContactForm from '../molecules/contact/ContactForm';
 import '../../styles/Contact.css';

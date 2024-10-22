@@ -1,33 +1,57 @@
-// src/App.js
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import Login from "./components/login/Login";
+import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from "react-router-dom";
+import Login from "./components/auth/Login";
 import MainConten from "./components/template/mainconten";
-import Sektoral from "./components/login/sektoral"; // Import komponen 
-import Buku from "./components/login/buku"; // Import komponen Sektoral
-import { login } from "./components/login/loginService";
-import Swal from "sweetalert2"; // Import SweetAlert
-import './App.css'; // Global CSS
+import Sektoral from "./components/template/sektoral";
+import Buku from "./components/template/buku";
+import DataSet from "./components/template/dataSet";
+import NotFound from "./components/auth/NotFound"; // Pastikan komponen ini di-import
+import { login } from "./components/auth/loginService";
+import Swal from "sweetalert2";
+import Navbar from "./components/organisms/Navbar"; // Import Navbar
+import './App.css';
 
+// Main App component
 function App() {
     return (
-        <div className="App">
-            <Router>
-                <Routes>
-                    {/* Route untuk halaman login */}
-                    <Route path="/" element={<LoginWrapper />} />
-                    {/* Route untuk halaman utama setelah login */}
-                    <Route path="/main" element={<ProtectedRoute><MainConten /></ProtectedRoute>} />
-                    {/* Route untuk halaman Sektoral */}
-                    <Route path="/sektoral" element={<ProtectedRoute><Sektoral /></ProtectedRoute>} />
-                    <Route path="/buku" element={<ProtectedRoute><Buku /></ProtectedRoute>} />
-                </Routes>
-            </Router>
-        </div>
+        <Router>
+            <AppContent /> {/* All routing and content handling goes here */}
+            
+        </Router>
     );
 }
 
-// Fungsi pembungkus untuk login, menambahkan navigasi setelah berhasil login
+// Separate component for handling content and routing
+function AppContent() {
+    const location = useLocation(); // Now this is inside the Router context
+
+    return (
+        <div className="App">
+        {/* Render Navbar only if not on the login or not found page */}
+        {location.pathname !== '/login' && location.pathname !== '*' && <Navbar />}
+        <Routes>
+            <Route path="/login" element={<LoginWrapper />} />
+            <Route path="/" element={<MainConten />} />
+            <Route 
+                path="/sektoral" 
+                element={<Sektoral />} 
+            />
+            <Route 
+                path="/buku" 
+                element={<Buku />} 
+            />
+             <Route 
+                path="/dataset" 
+                element={<DataSet />} 
+            />
+            {/* Wildcard route to catch all undefined paths */}
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+    </div>
+    );
+}
+
+// Existing LoginWrapper function
 function LoginWrapper() {
     const handleLogin = async (nip, password) => {
         try {
@@ -46,7 +70,7 @@ function LoginWrapper() {
             localStorage.setItem('token', result.token); // Simpan token login
 
             // Navigasi ke halaman main setelah login berhasil
-            window.location.href = '/main';
+            window.location.href = '/'; // Change this to '/' to match the route
         } catch (error) {
             console.error('Login gagal:', error);
 
@@ -63,13 +87,13 @@ function LoginWrapper() {
     return <Login onLogin={handleLogin} />;
 }
 
-// Komponen untuk melindungi route, memastikan pengguna hanya bisa mengakses jika sudah login
+// Komponen untuk melindungi route
 function ProtectedRoute({ children }) {
     const token = localStorage.getItem('token');
 
     if (!token) {
         // Jika tidak ada token, arahkan kembali ke halaman login
-        return <Navigate to="/" replace />;
+        return <Navigate to="/login" replace />;
     }
 
     // Jika ada token, render konten yang di-protect

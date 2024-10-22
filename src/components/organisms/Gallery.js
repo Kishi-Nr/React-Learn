@@ -9,7 +9,7 @@ const Gallery = () => {
   return (
     <section id="Gallery">
       <div className="gallery">
-        <Title title="Latest work" />
+        <Title title="Latest Work" />
         <div className="gallery-content">
           {[...Array(6)].map((_, index) => (
             <GalleryItem

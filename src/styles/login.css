@@ -6,10 +6,11 @@
     justify-content: center;
     height: 100vh;
     background-color: #f0f8ff; /* Biru muda */
+   
 }
 
 .login-container h2 {
-    color: #4CAF50; /* Warna hijau */
+    color: #3b82f6; /* Warna hijau */
     margin-bottom: 20px;
     font-size: 24px;
     font-family: 'Arial', sans-serif;
@@ -44,14 +45,14 @@
 
 .login-container input[type="text"]:focus,
 .login-container input[type="password"]:focus {
-    border-color: #4CAF50; /* Hijau saat fokus */
+    border-color: #3b82f6; /* Hijau saat fokus */
     outline: none;
 }
 
 .login-container button[type="submit"] {
     width: 100%;
     padding: 12px;
-    background-color: #4CAF50; /* Warna hijau */
+    background-color: #3b82f6; /* Warna hijau */
     color: white;
     border: none;
     border-radius: 5px;
@@ -72,140 +73,253 @@
 
 /* styles/login.css */
 
-/* Container utama */
-.sektor-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Box untuk form pencarian */
-  .sektor-box {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 20px;
-    width: 100%;
-    max-width: 800px;
-    margin-bottom: 20px;
-  }
-  
-  /* Judul pencarian */
-  .sektor-title {
-    font-size: 1.5rem;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  
-  /* Form pencarian dengan grid */
-  .sektor-form {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Dua kolom untuk form */
-    gap: 15px;
-    width: 100%;
-  }
-  
-  /* Input form */
-  .sektor-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  
-  /* Tombol submit */
-.sektor-button {
-    grid-column: span 4; /* Membuat tombol melintang dua kolom */
-    background-color: #3b82f6;
-    color: white;
-    padding: 10px 0;
-    font-size: 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 20px auto; /* Menambahkan margin otomatis untuk memusatkan tombol */
-    width: 150px; /* Tambahkan lebar tetap untuk tombol agar tampil lebih rapi */
-    display: block; /* Memastikan tombol adalah elemen block untuk margin bekerja */
-  }
-  
-  .sektor-button:hover {
-    background-color: #2563eb; /* Warna biru lebih gelap saat hover */
-  }
-  
-  
-  /* Pesan error */
-  .error-message {
-    color: red;
-    font-size: 1rem;
-    margin-top: 15px;
-  }
-  
-  /* Pesan tidak ada data */
-  .no-data-message {
-    color: #555;
-    font-size: 1rem;
-    margin-top: 15px;
-  }
-  
-  /* Container untuk hasil pencarian */
-  .hasil-container {
-    width: 100%;
-    max-width: 1000px;
-    margin-top: 20px;
-  }
-  
-  /* Judul hasil pencarian */
-  .hasil-title {
-    font-size: 1.5rem;
-    color: #0284c7; /* Warna biru */
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  /* Tabel hasil pencarian */
-  .hasil-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
-  
-  .hasil-table th, .hasil-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-  }
-  
-  .hasil-table th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-  }
-  
-  .hasil-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  /* Hover effect pada tabel */
-  .hasil-table tr:hover {
-    background-color: #f1f1f1;
-  }
-  
-  /* Responsif */
-  @media (max-width: 768px) {
-    .sektor-form {
-      grid-template-columns: 1fr; /* Satu kolom di layar kecil */
-    }
-  
-    .sektor-button {
-      grid-column: span 1; /* Tombol hanya satu kolom */
-    }
-  }
+
+/* styles/sektoral.css */
+
+/* Container for the main component */
+.sektoral-container {
+  padding: 20px;
+  max-width: 1200px; /* Set max width */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Box for the form and results */
+.sektoral-box {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Title styles */
+.sektoral-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center; /* Center the title */
+}
+
+/* Form styles */
+.sektoral-form {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Create 5 equal columns */
+  gap: 15px; /* Space between grid items */
+}
+
+/* Input styles */
+.sektoral-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%; /* Make inputs fill the column */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Button styles */
+.sektoral-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  grid-column: span 1; /* Ensure button takes one column */
+}
+
+/* Button hover effect */
+.sektoral-button:hover {
+  background-color: #0056b3;
+}
+
+/* Error message styles */
+.error-message {
+  color: red;
+  margin-top: 10px;
+  text-align: center; /* Center the error message */
+}
+
+/* Result table styles */
+.result-table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header styles */
+.result-table th,
+.result-table td {
+  border: 1px solid #ddd;
+  padding: 10px; /* Increased padding for better readability */
+  text-align: left;
+}
+
+/* Table header background color */
+.result-table th {
+  background-color: #f2f2f2;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: space-between; /* Space between elements */
+  align-items: center; /* Center items vertically */
+  margin-top: 20px; /* Space above pagination */
+}
+
+.pagination-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.pagination-button:hover {
+  background-color: #0056b3; /* Darker on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.pagination-button:disabled {
+  background-color: #cccccc; /* Gray background for disabled */
+  cursor: not-allowed; /* Change cursor */
+}
+
+.pagination-info {
+  font-size: 16px;
+}
+
+.previous {
+  justify-self: flex-start; /* Align Previous button to the left */
+}
+
+.next {
+  justify-self: flex-end; /* Align Next button to the right */
+}
+
+/* Pagination form styles */
+.pagination-form {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Pagination input styles */
+.pagination-input {
+  width: 50px;
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center; /* Center text inside input */
+}
+
+/* Go button for pagination */
+.pagination-go-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-go-button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for select containers */
+.select-container {
+  display: flex;
+  gap: 10px; /* Space between select elements */
+  margin-bottom: 15px; /* Space below select containers */
+}
+
+/* Year inputs styling */
+.year-inputs {
+  display: flex;
+  gap: 10px; /* Space between year inputs */
+  margin-bottom: 15px; /* Space below year inputs */
+}
+
+/* Import Select2 styles */
+@import '~select2/dist/css/select2.min.css';
+
+/* Styles for Select2 selection box */
+.select2-selection {
+  border: 1px solid #ccc; /* Match input border color */
+  border-radius: 4px; /* Match input border radius */
+  height: 38px; /* Match input height */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  box-sizing: border-box; /* Include padding in height */
+  padding: 0; /* Reset padding */
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 45px !important;
+}
+
+.select2-container .select2-selection--single {
+  height: 46px !important;
+}
+
+.select2-selection__placeholder {
+  line-height: 43px !important;
+  float: left !important;
+}
+
+
+/* Styles for rendered text inside the selection box */
+.select2-selection__rendered {
+  line-height: 38px; /* Center vertically */
+  padding: 0 12px; /* Horizontal padding for text */
+}
+
+/* Placeholder text styles */
+.select2-selection__placeholder {
+  color: #999; /* Placeholder color */
+  text-align: center; /* Center placeholder text */
+  line-height: 38px; /* Center vertically */
+}
+
+/* Styles for the Select2 dropdown when open */
+.select2-container--default .select2-selection--single {
+  border: 1px solid #ccc; /* Consistent border on active state */
+}
+
+/* Styles for focused state to prevent shape change */
+.select2-selection:focus {
+  border-color: #007bff; /* Border color on focus */
+  outline: none; /* Remove outline */
+}
+
+/* Add styles for the select2 dropdown menu to ensure it doesn't change shape */
+.select2-results__option {
+  padding: 8px 12px; /* Padding for dropdown items */
+  color: #333; /* Text color */
+  text-align: center; /* Center text */
+  border-radius: 4px; /* Match input border radius for consistency */
+}
+
+/* Highlighted dropdown item */
+.select2-results__option--highlighted {
+  background-color: #007bff; /* Highlight color */
+  color: white; /* Text color on highlight */
+}
+
+
+ /* src/styles/sektoral.css */
+
+
+
+
 
   /* src/styles/Bukudigital.css */
 
@@ -216,23 +330,24 @@
   margin: 0 auto;
 }
 
+/* Style for the main container box */
 .sektoral-box {
-  background-color: white;
+  background-color: #f9f9f9; /* Lighter background for a softer look */
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Slightly increased border radius for smoother corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
 }
 
-/* Other styles as needed */
-
-
+/* Title styles */
 .sektoral-title {
-  font-size: 24px;
+  font-size: 28px; /* Increased font size for better visibility */
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
+  color: #333; /* Darker color for better contrast */
 }
 
+/* Result table styles */
 .result-table {
   margin-top: 20px;
 }
@@ -243,32 +358,55 @@
 }
 
 .result-table th, .result-table td {
-  padding: 12px;
+  padding: 15px; /* Slightly increased padding */
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #e0e0e0; /* Lighter border for a subtle effect */
 }
 
 .result-table th {
-  background-color: #f1f1f1;
+  background-color: #007bff; /* Use a bright color for the header */
+  color: white; /* White text for contrast */
+  font-weight: bold; /* Bold text for headers */
 }
 
 .result-table tr:hover {
-  background-color: #f5f5f5;
+  background-color: rgba(0, 123, 255, 0.1); /* Light blue hover effect for table rows */
 }
 
 .detail-button {
-  background-color: #007bff;
+  background-color: #28a745; /* A fresh green color for buttons */
   color: white;
   border: none;
-  border-radius: 4px;
-  padding: 8px 12px;
+  border-radius: 5px; /* More rounded corners */
+  padding: 10px 15px; /* Increased padding for better touch targets */
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s; /* Added transform for a slight scale effect */
 }
 
 .detail-button:hover {
-  background-color: #0056b3;
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sektoral-container {
+    padding-top: 60px; /* Adjust for smaller screens */
+  }
+  
+  .sektoral-title {
+    font-size: 24px; /* Smaller font size for mobile */
+  }
+
+  .result-table th, .result-table td {
+    padding: 10px; /* Adjust padding for smaller devices */
+  }
+
+  .detail-button {
+    width: 100%; /* Full width button on mobile */
+  }
+}
+
 
 .error-message {
   color: red;
@@ -311,4 +449,168 @@
   text-align: center;
   font-size: 18px;
   color: #6c757d;
+}
+
+.notfound-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.notfound-container h1 {
+  font-size: 80px;
+  color: #e74c3c;
+}
+
+.notfound-container p {
+  font-size: 20px;
+  color: #7f8c8d;
+}
+
+.notfound-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.notfound-container button:hover {
+  background-color: #45a049;
+}
+
+
+
+/* Data Set*/
+/* styles/login.css */
+
+/* Kontainer utama */
+.dataset-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #f5f5f5;
+  margin-top: 80px;
+}
+
+.dataset-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  
+
+}
+
+/* Kontainer dua kolom untuk Cari Produsen dan Hasil Dataset */
+.dataset-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+/* Kolom kiri: Cari Produsen */
+.left-column {
+  flex: 0 0 30%; /* Set kolom kiri lebar 35% */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 10px;
+}
+
+/* Input pencarian */
+.dataset-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+/* Daftar OPD */
+.opd-list {
+  max-height: 400px;
+  overflow-y: scroll; /* Use scroll to enable scrolling */
+  padding-right: 10px;
+  text-align: left;
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* Untuk menyembunyikan scrollbar di Webkit (Chrome, Safari) */
+.opd-list::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
+
+/* Daftar hasil dataset */
+.result-list {
+  max-height: 500px;
+  overflow-y: scroll; /* Use scroll to enable scrolling */
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* Untuk menyembunyikan scrollbar di Webkit (Chrome, Safari) */
+.result-list::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
+
+
+/* Kartu untuk setiap OPD */
+.opd-item {
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.opd-item:hover {
+  transform: scale(1.02);
+}
+
+.opd-item.selected {
+  border: 2px solid #ffffff;
+}
+
+/* Styling untuk kartu (card) OPD */
+.card {
+  width: 100%; /* Mengisi lebar kolom */
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Kolom kanan: Hasil Dataset */
+.right-column {
+  flex: 0 0 68%; /* Set kolom kanan lebar 60% */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Daftar hasil dataset */
+.result-list {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* Kartu untuk setiap hasil dataset */
+.data-item {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 14px;
 }

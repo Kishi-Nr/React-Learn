@@ -2,8 +2,8 @@
 .skills {
   background-color: #ffffff;
   width: Fill (1,280px); 
-  height: 513px; 
-  padding: 42px 24px;
+  height: Hug (513px);
+  padding: 42px 24px 42px 24px;
   gap: 42px;
   opacity: 1; 
   display: flex;
@@ -15,21 +15,21 @@
 
 .skills-content {
   display: grid;
-  grid-template-columns: repeat(3, 394.67px); 
+  grid-template-columns: repeat(3,394.67px); 
   gap: 24px; 
   justify-content: center; /* Center grid items horizontally */
 }
 
 
 .skill-card {
-  width: 394.67px; 
-  height: 429px; 
+  width: Fill (394.67px);
+  height: Hug (429px);
   padding: 64px 42px; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px; 
+  gap: 20px; 
   opacity: 1; 
 }
 
@@ -47,4 +47,5 @@
   width: 124px; 
   height: 124px; 
 }
+
 

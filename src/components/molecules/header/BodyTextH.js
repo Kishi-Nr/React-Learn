@@ -1,5 +1,5 @@
 import React from "react";
-import Lable from "../../atoms/Lable";
+import Lable from "../../atoms/Label";
 
 const BodyTextH = () => {
   return (
