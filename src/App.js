@@ -5,7 +5,8 @@ import MainConten from "./components/template/mainconten";
 import Sektoral from "./components/template/sektoral";
 import Buku from "./components/template/buku";
 import DataSet from "./components/template/dataSet";
-import NotFound from "./components/auth/NotFound"; // Pastikan komponen ini di-import
+import DetailDataset from "./components/template/DetailDataset"; // Import the DetailDataset component
+import NotFound from "./components/auth/NotFound"; // Ensure this component is imported
 import { login } from "./components/auth/loginService";
 import Swal from "sweetalert2";
 import Navbar from "./components/organisms/Navbar"; // Import Navbar
@@ -16,7 +17,6 @@ function App() {
     return (
         <Router>
             <AppContent /> {/* All routing and content handling goes here */}
-            
         </Router>
     );
 }
@@ -27,27 +27,19 @@ function AppContent() {
 
     return (
         <div className="App">
-        {/* Render Navbar only if not on the login or not found page */}
-        {location.pathname !== '/login' && location.pathname !== '*' && <Navbar />}
-        <Routes>
-            <Route path="/login" element={<LoginWrapper />} />
-            <Route path="/" element={<MainConten />} />
-            <Route 
-                path="/sektoral" 
-                element={<Sektoral />} 
-            />
-            <Route 
-                path="/buku" 
-                element={<Buku />} 
-            />
-             <Route 
-                path="/dataset" 
-                element={<DataSet />} 
-            />
-            {/* Wildcard route to catch all undefined paths */}
-            <Route path="*" element={<NotFound />} />
-        </Routes>
-    </div>
+            {/* Render Navbar only if not on the login or not found page */}
+            {location.pathname !== '/login' && location.pathname !== '*' && <Navbar />}
+            <Routes>
+                <Route path="/login" element={<LoginWrapper />} />
+                <Route path="/" element={<MainConten />} />
+                <Route path="/sektoral" element={<Sektoral />} />
+                <Route path="/buku" element={<Buku />} />
+                <Route path="/dataset" element={<DataSet />} />
+                <Route path="/detail/:id" element={<DetailDataset />} /> {/* Add detail route */}
+                {/* Wildcard route to catch all undefined paths */}
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </div>
     );
 }
 
@@ -57,7 +49,7 @@ function LoginWrapper() {
         try {
             const result = await login(nip, password);
 
-            // Tampilkan alert ketika login berhasil
+            // Show alert when login is successful
             Swal.fire({
                 title: 'Login Berhasil!',
                 text: 'Selamat datang!',
@@ -65,16 +57,16 @@ function LoginWrapper() {
                 confirmButtonText: 'Lanjutkan'
             });
 
-            // Simpan data riwayat login di localStorage
-            localStorage.setItem('nip', nip); // Simpan NIP
-            localStorage.setItem('token', result.token); // Simpan token login
+            // Save login history to localStorage
+            localStorage.setItem('nip', nip); // Save NIP
+            localStorage.setItem('token', result.token); // Save login token
 
-            // Navigasi ke halaman main setelah login berhasil
+            // Navigate to main page after successful login
             window.location.href = '/'; // Change this to '/' to match the route
         } catch (error) {
             console.error('Login gagal:', error);
 
-            // Tampilkan alert ketika login gagal
+            // Show alert when login fails
             Swal.fire({
                 title: 'Login Gagal',
                 text: 'NIP atau password salah. Silakan coba lagi.',
@@ -87,16 +79,16 @@ function LoginWrapper() {
     return <Login onLogin={handleLogin} />;
 }
 
-// Komponen untuk melindungi route
+// Protected route component
 function ProtectedRoute({ children }) {
     const token = localStorage.getItem('token');
 
     if (!token) {
-        // Jika tidak ada token, arahkan kembali ke halaman login
+        // If no token, redirect back to the login page
         return <Navigate to="/login" replace />;
     }
 
-    // Jika ada token, render konten yang di-protect
+    // If there is a token, render the protected content
     return children;
 }
 

@@ -129,8 +129,9 @@ const Sektoral = () => {
   return (
     <div className="sektoral-container">
       <div className="sektoral-box">
-        <h2 className="sektoral-title">Cari Data Sektoral</h2>
-        <form
+        <h2 className="sektoral-title">Data Sektoral Berdasarkan OPD</h2>
+        <div className="card">
+          <form
           className="sektoral-form"
           onSubmit={(e) => {
             e.preventDefault();
@@ -190,15 +191,15 @@ const Sektoral = () => {
             Cari
           </button>
         </form>
-
+        </div>
         {error && <p className="error-message">{error}</p>}
-
         {loading ? (
           <p>Loading...</p>
         ) : (
           <div className="result-table table-striped">
             <h3>Hasil Pencarian</h3>
             <div>Total Data: {totalData}</div>
+            <div className="card">
             <table>
               <thead>
                 <tr>
@@ -271,7 +272,8 @@ const Sektoral = () => {
               >
                 Next
               </button>
-            </div>
+            </div> 
+          </div>
           </div>
         )}
       </div>
