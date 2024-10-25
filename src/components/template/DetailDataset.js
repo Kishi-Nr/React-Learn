@@ -105,15 +105,11 @@ const DetailDataset = () => {
     document.body.removeChild(link);
   };
 
-  const handleOpenApi = (apiUrl) => {
-    window.open(apiUrl, "_blank");
-  };
-  
 
   return (
     <div className="detail-dataset">
-      <h2>Detail Dataset</h2>
-      <div className="text-">
+      <h2 >Detail Dataset</h2>
+      <div className="text-1">
         Temukan kumpulan data-data mentah berupa tabel yang bisa diolah lebih lanjut di sini.
         Open Data menyediakan akses ke beragam koleksi dataset dari seluruh Organisasi Perangkat Daerah di Lampung Timur.
       </div>
@@ -156,7 +152,7 @@ const DetailDataset = () => {
           <div className="card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <h3>Jumlah Data Sektoral & Api Interoperabilitas</h3>
-            <button className="download-button" onClick={handleDownload}>Download</button>
+            <button className="download-button" onClick={ handleDownload }>Download</button>
           </div>
           
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -195,9 +191,10 @@ const DetailDataset = () => {
                   {/* Contoh data tabel tambahan */}
                       <tr>
                         <td>{"GET"}</td>
-                        <td> <button onClick={() => handleOpenApi("http://116.206.212.234:4000/site/handler/http/assets/dataset/jumlah_smp_negeri.xlsx")}>
+                        <td> 
+                        <a href={`http://116.206.212.234:3002/dataset/detail/${id}`}  rel="noopener noreferrer" className="btn btn-primary">
                            Open API
-                        </button>
+                        </a>
                         </td>
                       </tr>
                 </tbody>

@@ -48,27 +48,30 @@ const Buku = () => {
   return (
     <div className="sektoral-container">
       <div className="sektoral-box">
-        <h2 className="sektoral-title">Daftar Buku Digital</h2>
+        <h2 className="sektoral-title">Publikasi</h2>
         {error && <p className="error-message">{error}</p>}
 
         {loading ? (
           <p>Loading...</p>
         ) : (
           <div className="result-table table-striped">
-            <h3>Hasil Pencarian</h3>
             <table>
               <thead>
                 <tr>
+                <th>No</th>
                   <th>Judul Buku</th>
+                  <th>Perangkat Daerah</th>
                   <th>Tahun</th>
                   <th>Detail</th>
                 </tr>
               </thead>
               <tbody>
                 {bukuDigital.length > 0 ? (
-                  bukuDigital.map((buku) => (
+                  bukuDigital.map((buku,index) => (
                     <tr key={buku.id_buku_digital}>
+                       <td>{index+1}</td>
                       <td>{buku.buku}</td>
+                      <td>{buku.nama_opd}</td>
                       <td>{buku.tahun}</td>
                       <td>
                         <button

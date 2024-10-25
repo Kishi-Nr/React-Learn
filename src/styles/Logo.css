@@ -3,7 +3,9 @@
   display: flex;
   justify-content: space-between;
   padding: 42px 68px;
-  width: Fill (1,280px);;
+  width: Fill (1,280px);
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .logo-image {

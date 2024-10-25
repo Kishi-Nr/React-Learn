@@ -1,7 +1,7 @@
 :root {
   --layout-width: Fill (1,280px);
   --layout-padding: 42px 68px;
-  --layout-gap: 68px;
+  --layout-gap: 40px;
   --layout-opacity: 1;
 }
 
@@ -18,7 +18,8 @@
 
 
 .text-section {
-  flex: 2;
+  flex: 1;
+  margin-left: 200px;
 }
 
 
@@ -31,8 +32,8 @@
 
 
 .image-section img {
-  width: 500px; 
-  height: 380px; 
+  width: 600px; 
+  height: auto; 
   ;
 }
 

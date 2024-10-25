@@ -36,7 +36,7 @@ const NavbarMenu = () => {
     <nav className="navbar">
       <div className="navbar-logo">
         {/* Use Image component for logo */}
-        <Image src="/img/to/logo.png" /> {/* Update the path to your logo image */}
+        <Image src="/img/navbar/satu_data.png" /> {/* Update the path to your logo image */}
       </div>
       <ul className="navbar-menu">
         <li>
@@ -51,7 +51,7 @@ const NavbarMenu = () => {
         </li>
         <li>
           <Link to="/buku">
-            <Label className="navbar-item">Buku</Label> {/* Use Label component */}
+            <Label className="navbar-item">Publikasi</Label> {/* Use Label component */}
           </Link>
         </li>
         <li>
@@ -59,23 +59,13 @@ const NavbarMenu = () => {
             <Label className="navbar-item">DataSet</Label> {/* Use Label component */}
           </Link>
         </li>
-        {/* Dropdown menu for Menu item */}
-        <li className="menu-dropdown" onMouseLeave={closeDropdown}>
-          <div className="dropdown-toggle" onClick={toggleDropdown}>
-            <Label className="navbar-item">Menu</Label> {/* Use Label component */}
-          </div>
-          {dropdownOpen && (
-            <ul className="dropdown-menu">
-              <li className="dropdown-divider"></li> {/* Divider for separation */}
-              <li>
-                <button className="logout-button" onClick={handleLogout}>
-                  Logout
-                </button>
-              </li>
-            </ul>
-          )}
+        <li>
+          <Link to="/dataset">
+            <Label className="logout-button" onClick={handleLogout}>Logout</Label> {/* Use Label component */}
+          </Link>
         </li>
-      </ul>
+        {/* Dropdown menu for Menu item */}
+        </ul>
     </nav>
   );
 };

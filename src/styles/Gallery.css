@@ -1,8 +1,8 @@
 :root {
-  --max-width: 1600px;
+  --max-width: 1280px;
   --padding-y: 42px;
   --padding-x: 24px;
-  --gap: 42px;
+  --gap: 10px;
   --font-family: "Epilogue", sans-serif;
   --font-size-title: 32px;
   --font-size-subtitle: 20px;

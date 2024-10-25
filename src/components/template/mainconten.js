@@ -11,7 +11,6 @@ const MainConten = () => {
 
   return (
     <div>
-      <Navbar />
       <Header />
       <Logo />
       <Skills />
