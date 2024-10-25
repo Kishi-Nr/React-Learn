@@ -6,19 +6,7 @@ import '../../../styles/Navbar.css'; // Import the CSS file
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const NavbarMenu = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  // Function to toggle dropdown
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
-
-  // Close dropdown if clicking outside of the dropdown area
-  const closeDropdown = () => {
-    setDropdownOpen(false);
-  };
-
-  const navigate = useNavigate(); // Use useNavigate for navigation
+const navigate = useNavigate(); // Use useNavigate for navigation
 
   // Function to handle logout
   const handleLogout = () => {
@@ -60,7 +48,7 @@ const NavbarMenu = () => {
           </Link>
         </li>
         <li>
-          <Link to="/dataset">
+          <Link to="/login">
             <Label className="logout-button" onClick={handleLogout}>Logout</Label> {/* Use Label component */}
           </Link>
         </li>
